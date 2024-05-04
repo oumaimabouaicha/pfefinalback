@@ -8,6 +8,7 @@ const scategorieRouter =require("./routes/scategorie.route")
 const articleRouter=require('./routes/article.route')
 const paymentRouter = require( "./routes/payment.route.js")
 const userRouter = require( "./routes/user.route.js")
+const orderRouter =require("./routes/order.route")
 dotenv.config()
 const app = express();
 //BodyParser Middleware
@@ -33,6 +34,7 @@ app.use('/api/scategories', scategorieRouter);
 app.use('/api/articles',articleRouter);
 app.use('/api/payment', paymentRouter);
 app.use('/api/user', userRouter);
+app.use('/api/orders', orderRouter);
 app.listen(process.env.PORT, () => {
 console.log(`Server is listening on port ${process.env.PORT}`); })
 
